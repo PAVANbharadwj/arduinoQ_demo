@@ -1,0 +1,106 @@
+===== dmesg | tail -50 =====
+[   13.290675] zram0: detected capacity change from 0 to 3758016
+[   13.331151] Adding 1879004k swap on /dev/zram0.  Priority:100 extents:1 across:1879004k SS
+[   13.389950] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   13.395473] Bluetooth: BNEP socket layer initialized
+[   13.454335] remoteproc remoteproc0: remote processor modem is now up
+[   13.475215] Bluetooth: MGMT ver 1.23
+[   13.497278] NET: Registered PF_ALG protocol family
+[   13.544200] Bluetooth: RFCOMM socket layer initialized
+[   13.555784] Bluetooth: RFCOMM ver 1.11
+[   14.244386] ath10k_snoc c800000.wifi: qmi chip_id 0x140 chip_family 0x4002 board_id 0xff soc_id 0x40670000
+[   14.254618] ath10k_snoc c800000.wifi: qmi fw_version 0x337703a3 fw_build_timestamp 2023-10-14 01:26 fw_build_id QC_IMAGE_VERSION_STRING=WLAN.HL.3.3.7.c2-00931-QCAHLSWMTPLZ-1
+[   15.301227] file system registered
+[   15.561175] read descriptors
+[   15.564115] bcdVersion must be 0x0100, stored in Little Endian order. Userspace driver should be fixed, accepting 0x0001 for compatibility.
+[   15.576824] bcdVersion must be 0x0100, stored in Little Endian order. Userspace driver should be fixed, accepting 0x0001 for compatibility.
+[   15.589540] read strings
+[   16.680948] systemd-journald[260]: File /var/log/journal/1b885017743a43ecaf9f40c14abda3dd/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+[   16.796792] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[   16.811776] Bridge firewalling registered
+[   18.892784] ath10k_snoc c800000.wifi: wcn3990 hw1.0 target 0x00000008 chip_id 0x00000000 sub 0000:0000
+[   18.902171] ath10k_snoc c800000.wifi: kconfig debug 0 debugfs 0 tracing 0 dfs 0 testmode 0
+[   18.910506] ath10k_snoc c800000.wifi: firmware ver  api 5 features wowlan,mgmt-tx-by-reference,non-bmi,single-chan-info-per-channel crc32 a79c5b24
+[   18.950086] ath10k_snoc c800000.wifi: htt-ver 3.128 wmi-op 4 htt-op 3 cal file max-sta 32 raw 0 hwcrypto 1
+[   19.038050] ath: EEPROM regdomain: 0x406c
+[   19.038068] ath: EEPROM indicates we should expect a direct regpair map
+[   19.038076] ath: Country alpha2 being used: 00
+[   19.038080] ath: Regpair used: 0x6c
+[   20.705330] hdmi-audio-codec hdmi-audio-codec.1.auto: HDMI: Unknown ELD version 0
+[   20.716667] q6asm-dai ab00000.remoteproc:glink-edge:apr:service@7:dais: DEBUG: q6asm_dai_prepare: pcm size 19200 period 2 period_sz 2400 vs 9600 rate 48000 ch 2
+[   20.765026] q6asm-dai ab00000.remoteproc:glink-edge:apr:service@7:dais: DEBUG: q6asm_dai_prepare: pcm size 19200 period 2 period_sz 2400 vs 9600 rate 48000 ch 2
+[   20.793750] q6asm-dai ab00000.remoteproc:glink-edge:apr:service@7:dais: DEBUG: q6asm_dai_prepare: pcm size 19200 period 2 period_sz 2400 vs 9600 rate 48000 ch 2
+[   20.810428] q6routing ab00000.remoteproc:glink-edge:apr:service@8:routing: Found Matching Copp 0x0
+[   20.850238] q6asm-dai ab00000.remoteproc:glink-edge:apr:service@7:dais: DEBUG: q6asm_dai_prepare: pcm size 491520 period 8 period_sz 1920 vs 61440 rate 48000 ch 8
+[   20.890030]  MultiMedia1: ASoC: no backend DAIs enabled for MultiMedia1, possibly missing ALSA mixer-based routing or UCM profile
+[   20.906595] q6asm-dai ab00000.remoteproc:glink-edge:apr:service@7:dais: DEBUG: q6asm_dai_prepare: pcm size 491520 period 8 period_sz 1920 vs 61440 rate 48000 ch 8
+[   20.951368] q6asm-dai ab00000.remoteproc:glink-edge:apr:service@7:dais: DEBUG: q6asm_dai_prepare: pcm size 53760 period 8 period_sz 3360 vs 6720 rate 48000 ch 1
+[   21.218547] hdmi-audio-codec hdmi-audio-codec.1.auto: HDMI: Unknown ELD version 0
+[   21.285605] hdmi-audio-codec hdmi-audio-codec.1.auto: HDMI: Unknown ELD version 0
+[   21.295837] hdmi-audio-codec hdmi-audio-codec.1.auto: HDMI: Unknown ELD version 0
+[   29.065821] dwc3 4e00000.usb: request 000000002141ab24 was not queued to ep0out
+[   29.142458] ffs_data_put(): freeing
+[   29.162963] unloading
+[   30.366579] file system registered
+[   30.452525] read descriptors
+[   30.455458] bcdVersion must be 0x0100, stored in Little Endian order. Userspace driver should be fixed, accepting 0x0001 for compatibility.
+[   30.468257] bcdVersion must be 0x0100, stored in Little Endian order. Userspace driver should be fixed, accepting 0x0001 for compatibility.
+[   30.481069] read strings
+[   33.760674] l5: disabling
+[   33.763611] l16: disabling
+[   33.766881] usb_vbus: disabling
+
+
+===== journalctl -n 50 =====
+Oct 07 09:21:32 Bitsilica ModemManager[545]: <msg> [base-manager] couldn't check support for device '/sys/devices/platform/soc@0/c800000.wifi': not supported by any plugin
+Oct 07 09:21:33 Bitsilica systemd[1]: systemd-rfkill.service: Deactivated successfully.
+Oct 07 09:21:33 Bitsilica wpa_supplicant[520]: wlan0: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+Oct 07 09:21:33 Bitsilica wpa_supplicant[520]: wlan0: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+Oct 07 09:21:33 Bitsilica wpa_supplicant[520]: wlan0: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+Oct 07 09:21:33 Bitsilica wpa_supplicant[520]: wlan0: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+Oct 07 09:21:33 Bitsilica systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Oct 07 09:21:37 Bitsilica adbd[632]: 10-07 09:21:37.977   632   642 I adbd    : usb.cpp:300 USB event: FUNCTIONFS_DISABLE
+Oct 07 09:21:37 Bitsilica adbd[632]: 10-07 09:21:37.978   632   668 I adbd    : transport.cpp:1253 UsbFfs: connection terminated: read 2 failed with error Cannot send after transport endpoint shutdown
+Oct 07 09:21:37 Bitsilica socat[889]: 2026/10/07 09:21:37 socat[889] W cannot restore terminal settings on fd 5: Input/output error
+Oct 07 09:21:37 Bitsilica systemd[1]: arduino-router-serial.service: Main process exited, code=exited, status=129/n/a
+Oct 07 09:21:37 Bitsilica systemd[1]: arduino-router-serial.service: Failed with result 'exit-code'.
+Oct 07 09:21:38 Bitsilica kernel: dwc3 4e00000.usb: request 000000002141ab24 was not queued to ep0out
+Oct 07 09:21:38 Bitsilica systemd[1]: adbd.service: Main process exited, code=exited, status=1/FAILURE
+Oct 07 09:21:38 Bitsilica systemd[1]: dev-usb\x2dffs-adb.mount: Deactivated successfully.
+Oct 07 09:21:38 Bitsilica kernel: ffs_data_put(): freeing
+Oct 07 09:21:38 Bitsilica kernel: unloading
+Oct 07 09:21:38 Bitsilica adbd-usb-gadget[1013]: rmdir: failed to remove '/sys/kernel/config/usb_gadget/g1': Directory not empty
+Oct 07 09:21:38 Bitsilica systemd[1]: adbd.service: Control process exited, code=exited, status=1/FAILURE
+Oct 07 09:21:38 Bitsilica systemd[1]: adbd.service: Failed with result 'exit-code'.
+Oct 07 09:21:39 Bitsilica systemd[1]: adbd.service: Scheduled restart job, restart counter is at 1.
+Oct 07 09:21:39 Bitsilica systemd[1]: Starting adbd.service - Android Debug Bridge (ADB) daemon...
+Oct 07 09:21:39 Bitsilica kernel: file system registered
+Oct 07 09:21:39 Bitsilica adbd[1032]: 10-07 09:21:39.414  1032  1032 E adbd    : auth.cpp:204 Failed to get adbd socket: Success
+Oct 07 09:21:39 Bitsilica adbd[1032]: 10-07 09:21:39.415  1032  1032 E adbd    : adbd_auth.cpp:98 adbd_auth: failed to get adbd authentication socket: Success
+Oct 07 09:21:39 Bitsilica adbd[1032]: 10-07 09:21:39.415  1032  1035 I adbd    : usb_ffs.cpp:275 opening control endpoint /dev/usb-ffs/adb/ep0
+Oct 07 09:21:39 Bitsilica adbd[1032]: 10-07 09:21:39.415  1032  1034 E adbd    : adbd_auth.cpp:300 adbd_auth: socket unavailable, disabling user prompts
+Oct 07 09:21:39 Bitsilica adbd[1032]: 10-07 09:21:39.415  1032  1032 I adbd    : main.cpp:310 adbd started
+Oct 07 09:21:39 Bitsilica kernel: read descriptors
+Oct 07 09:21:39 Bitsilica kernel: bcdVersion must be 0x0100, stored in Little Endian order. Userspace driver should be fixed, accepting 0x0001 for compatibility.
+Oct 07 09:21:39 Bitsilica kernel: bcdVersion must be 0x0100, stored in Little Endian order. Userspace driver should be fixed, accepting 0x0001 for compatibility.
+Oct 07 09:21:39 Bitsilica adbd[1032]: 10-07 09:21:39.446  1032  1035 I adbd    : usb.cpp:154 UsbFfsConnection constructed
+Oct 07 09:21:39 Bitsilica kernel: read strings
+Oct 07 09:21:39 Bitsilica adbd[1032]: 10-07 09:21:39.448  1032  1037 I adbd    : usb.cpp:261 UsbFfs-monitor thread spawned
+Oct 07 09:21:39 Bitsilica adbd-usb-gadget[1038]: 4e00000.usb
+Oct 07 09:21:39 Bitsilica adbd[1032]: 10-07 09:21:39.504  1032  1037 I adbd    : usb.cpp:300 USB event: FUNCTIONFS_BIND
+Oct 07 09:21:39 Bitsilica systemd[1]: Started adbd.service - Android Debug Bridge (ADB) daemon.
+Oct 07 09:21:41 Bitsilica systemd[1]: arduino-router-serial.service: Scheduled restart job, restart counter is at 2.
+Oct 07 09:21:41 Bitsilica systemd[1]: Started arduino-router-serial.service - Proxy for the Arduino Router Monitor to ttyGS0 serial.
+Oct 07 09:21:41 Bitsilica arduino-router[566]: 2026/10/07 09:21:41 INFO Accepted monitor connection from=127.0.0.1:52314
+Oct 07 09:21:41 Bitsilica adbd[1032]: 10-07 09:21:41.354  1032  1037 I adbd    : usb.cpp:300 USB event: FUNCTIONFS_ENABLE
+Oct 07 09:21:41 Bitsilica adbd[1032]: 10-07 09:21:41.354  1032  1047 I adbd    : usb.cpp:407 UsbFfs-worker thread spawned
+Oct 07 09:21:42 Bitsilica adbd[1032]: 10-07 09:21:42.389  1032  1032 I adbd    : adb.cpp:173 UsbFfs: already offline
+Oct 07 09:21:42 Bitsilica adbd[1032]: 10-07 09:21:42.389  1032  1032 I adbd    : adb.cpp:395 authentication not required
+Oct 07 09:21:42 Bitsilica kernel: l5: disabling
+Oct 07 09:21:42 Bitsilica kernel: l16: disabling
+Oct 07 09:21:42 Bitsilica kernel: usb_vbus: disabling
+Oct 07 09:21:53 Bitsilica systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Oct 07 09:21:55 Bitsilica systemd[1]: blueman-mechanism.service: Deactivated successfully.
+Oct 07 09:21:55 Bitsilica systemd[1]: blueman-mechanism.service: Consumed 1.482s CPU time, 47.9M memory peak.
+
+
